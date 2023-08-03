@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="index.css">
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter&family=Smythe&display=swap" rel="stylesheet">
+        
+        <!-- Font Awesome CDN -->
+        <link rel="stylesheet" 
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+            crossorigin="anonymous" 
+            referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <div class="page-center opaque">
+            <header>
+                <div class="header-text">
+                    <h1>Jimmy's Diner</h1>
+                    <p>The best burgers and pizzas in town.</p>
+                </div>  
+            </header>
+        </div>
+        
+        <main>
+            <div class="page-center opaque">
+                <section>
+                    <div id="sales-page"></div>
+                    <div id="order-page"></div>
+                </section>  
+            </div>
+            <section>
+                <div id="card-details-page">
+                    <div class="card-details-form">
+                        <div class="card-details-form-header">
+                            <h2>Enter card details</h2>
+                        </div>
+                        <div class="card-details-form-body">
+                            <div class="card-details-form-body-input">
+                                <form>
+                                    <input type="text" id="card-name" placeholder="Enter your name" required>
+                                    <input type="text" id="card-number" placeholder="Enter your card number" required>
+                                    <input type="password" id="card-cvv" placeholder="Enter CVV" required>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="card-details-form-footer">
+                            <button id="card-details-form-footer-pay-btn">Pay</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        
+	    <script src="index.js" type="module"></script>
+    </body>
+</html>
+

@@ -1,0 +1,228 @@
+body {
+    margin: 0;
+    font-family: 'Smythe', cursive;
+} 
+
+.page-center{
+    width: 600px;
+    margin: auto;
+}
+
+/* header layout*/
+
+header{
+    background: url('header-img.png') no-repeat;
+    background-size: 50% cover;
+    height: 167px;
+}
+
+.header-text{
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    color: white;
+}
+
+/* header typography */
+.header-text h1{
+    margin: 0;
+    font-size: 39px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.header-text p{
+    font-size: 22px;
+    line-height: 13px;
+    font-weight: 400;
+}
+
+
+/* main page general layout */
+.food-item,
+#order-page{
+    margin: 46px;
+}
+
+.food-item,
+.order-item,
+.name-and-button,
+.order-details,
+.food-descr,
+.total{
+    display: flex;
+}
+
+.food-item,
+.order-item,
+.total{
+    justify-content: space-between;
+    align-items: start;
+}
+
+/* sale items page */
+.food-item{
+    border-bottom: 1px solid #e0e0e0;
+
+}
+
+
+.add-to-cart{
+    cursor: pointer;
+    background: none; 
+    margin-top: 5px;
+    border: 1.75px solid #e0e0e0;
+    padding: 7 12px;
+    border-radius: 60%;
+    font-size: 25px;
+    font-weight: 300;
+    font-family: 'Inter', sans-serif;
+}
+
+.food-descr{
+    flex-direction: row;
+    gap: 30px;
+}
+
+.food-emoji{
+    font-size: 50px;
+    font-weight: 400;
+    color: #4f4f4f;
+    opacity: 0.72;
+}
+
+.food-name h1{
+    font-size: 28px;
+    line-height: 16.8px; /* 60% */
+}
+
+.food-name h2{
+    font-size: 20px;
+    line-height: 24px; /* 60% */
+}
+
+.food-name p{
+    color: #8B8B8B;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+}
+
+.food-name h1,
+.food-name h2{
+    color: #000;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.food-name h1,
+.food-name h2,
+.food-name p{
+    font-family: 'Smythe', cursive;
+}
+
+/* Order Page */
+.order-title{
+    text-align: center;
+}
+
+#order-page{
+    padding: 0 15px;
+    display: none;
+}
+
+.order-name,
+.order-title{
+    color: #000;
+    font-family: 'Smythe', cursive;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 16.8px; /* 60% */
+}
+
+.order-price{
+    text-align: right;
+}
+
+.remove-from-cart{
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    color: #BBB;
+    font-family: 'Verdana', 'Geneva', 'Tahoma', 'sans-serif';
+    font-size: 12px;
+    line-height: 24px; /* 200% */
+}
+
+.order-details{
+    gap: 5px;
+}
+
+.total{
+    border-top: 2px solid #393333;
+}
+
+.order-button,
+#card-details-page button{
+    display: block;
+    border-radius: 3px;
+    background: #16DB99;
+    border: none;
+    /* shadow/sm */
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    color: white;
+    padding: 18px 165px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px; /* 60% */
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+#card-details-page{
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 500px;
+    height: 500px;
+    background: white;
+    box-shadow: 3px 1px 2px 3px rgba(0, 0, 0, 0.05);
+}
+
+#card-details-page input{
+    padding: 15px 25px;
+    display: block;
+    color: #757575;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 31.119px; /* 155.596% */
+    margin-bottom: 20px;
+    border: 1.297px solid #757575;
+}
+
+#card-details-page input,
+#card-details-page button{
+    width: 475px;
+    border-radius: 3.89px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-details-form-header{
+    color: #000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 31.119px; /* 129.664% */
+    text-align: center;
+    padding: 20px;
+}
