@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: 'Smythe', cursive;
+    background: whitesmoke;
 } 
 
 .page-center{
@@ -49,7 +50,8 @@ header{
 .name-and-button,
 .order-details,
 .food-descr,
-.total{
+.total,
+.card-details-form-header{
     display: flex;
 }
 
@@ -66,7 +68,7 @@ header{
 
 }
 
-
+/* The plus button for adding item to order */
 .add-to-cart{
     cursor: pointer;
     background: none; 
@@ -79,11 +81,13 @@ header{
     font-family: 'Inter', sans-serif;
 }
 
+/* name of the food item, with ingredients and price */
 .food-descr{
     flex-direction: row;
     gap: 30px;
 }
 
+/* Emoji */
 .food-emoji{
     font-size: 50px;
     font-weight: 400;
@@ -91,6 +95,7 @@ header{
     opacity: 0.72;
 }
 
+/* typography for the food display page  */
 .food-name h1{
     font-size: 28px;
     line-height: 16.8px; /* 60% */
@@ -122,7 +127,7 @@ header{
     font-family: 'Smythe', cursive;
 }
 
-/* Order Page */
+/* Order Page Layout*/
 .order-title{
     text-align: center;
 }
@@ -162,14 +167,22 @@ header{
 .total{
     border-top: 2px solid #393333;
 }
+.remove-from-cart:hover{
+    color: #000;
+}
 
+.remove-from-cart{
+    background: none;
+    text-decoration: underline;
+}
+
+/* Card details page */
 .order-button,
-#card-details-page button{
+#card-details-form-footer-pay-btn{
     display: block;
     border-radius: 3px;
     background: #16DB99;
     border: none;
-    /* shadow/sm */
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
     color: white;
     padding: 18px 165px;
@@ -209,7 +222,7 @@ header{
 }
 
 #card-details-page input,
-#card-details-page button{
+#card-details-form-footer-pay-btn{
     width: 475px;
     border-radius: 3.89px;
     margin-left: auto;
@@ -217,6 +230,7 @@ header{
 }
 
 .card-details-form-header{
+    justify-content: space-between;
     color: #000;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 15px;
@@ -224,5 +238,15 @@ header{
     font-weight: 500;
     line-height: 31.119px; /* 129.664% */
     text-align: center;
-    padding: 20px;
+    padding: 15px 20px;
+}
+
+#card-details-form-header-close-btn{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#card-details-form-header-close-btn:hover{
+    color: #16DB99;
 }

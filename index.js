@@ -26,7 +26,7 @@ document.addEventListener('click', function(e){
         renderSales(cart, e.target.dataset.clicks);
     }
     // Remove from cart
-    if (e.target.className === 'remove-from-cart'){
+    else if (e.target.className === 'remove-from-cart'){
         let id = e.target.dataset.id;
         const idRemoveButton = document.querySelector(`button[class="add-to-cart"][data-id="${id}"]`);
 
@@ -42,10 +42,21 @@ document.addEventListener('click', function(e){
         removeSales(cart, e.target.dataset.clicks);
     }
     // Complete order
-    if (e.target.className === 'order-button'){
+    else if (e.target.className === 'order-button'){
         console.log('order completed')
         cardDetailsPage.style.display = 'block';
         opaque.style.opacity = '0.7';
+    }
+    // Close card details
+    else if (e.target.className === 'close-btn'){
+        cardDetailsPage.style.display = 'none';
+        opaque.style.opacity = '1';
+    }
+    else if (e.target.className === "pay-btn"){
+        orderPage.innerHTML = '';
+        opaque.style.opacity = '1';
+        totalPrice = 0;
+        orderDetails = {};
     }
 }
 )
