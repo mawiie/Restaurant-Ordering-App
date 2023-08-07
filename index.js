@@ -48,12 +48,13 @@ document.addEventListener('click', function(e){
         opaque.style.opacity = '0.7';
     }
     // Close card details
-    else if (e.target.className === 'close-btn'){
+    else if (e.target.className === 'fas fa-times'){
         cardDetailsPage.style.display = 'none';
         opaque.style.opacity = '1';
     }
     else if (e.target.className === "pay-btn"){
         orderPage.innerHTML = '';
+        cardDetailsPage.style.display = 'none';
         opaque.style.opacity = '1';
         totalPrice = 0;
         orderDetails = {};
