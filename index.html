@@ -30,6 +30,8 @@
                 <section>
                     <div id="sales-page"></div>
                     <div id="order-page"></div>
+                    <!-- Thank you page -->
+                    <div id="thank-you-msg"></div>
                 </section>  
             </div>
             <section>
@@ -44,10 +46,10 @@
                         </div>
                         <div class="card-details-form-body">
                             <div class="card-details-form-body-input">
-                                <form>
-                                    <input type="text" id="card-name" placeholder="Enter your name" required>
-                                    <input type="text" id="card-number" placeholder="Enter your card number" required>
-                                    <input type="password" id="card-cvv" placeholder="Enter CVV" required>
+                                <form id="payment-form">
+                                    <input type="text" id="card-name" name="Name" placeholder="Enter your name" required>
+                                    <input type="text" id="card-number" name="card-Number" placeholder="Enter your card number" required>
+                                    <input type="password" id="card-cvv" name="CVV" placeholder="Enter CVV" required>
                                 </form>
                             </div>
                         </div>
@@ -55,7 +57,6 @@
                             <button id="card-details-form-footer-pay-btn" class="pay-btn">Pay</button>
                         </div>
                     </div>
-                </div>
             </section>
         </main>
         

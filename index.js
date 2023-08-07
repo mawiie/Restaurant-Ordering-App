@@ -2,6 +2,8 @@ import { data } from './data.js';
 const salesPage = document.getElementById('sales-page');
 const orderPage = document.getElementById('order-page');
 const cardDetailsPage = document.getElementById('card-details-page');
+const thankYouMsg = document.getElementById('thank-you-msg');
+const paymentForm = document.getElementById('payment-form');    
 const opaque = document.querySelector('.opaque');
 let orderDetails = {}
 let totalPrice = 0
@@ -53,11 +55,9 @@ document.addEventListener('click', function(e){
         opaque.style.opacity = '1';
     }
     else if (e.target.className === "pay-btn"){
-        orderPage.innerHTML = '';
-        cardDetailsPage.style.display = 'none';
-        opaque.style.opacity = '1';
-        totalPrice = 0;
-        orderDetails = {};
+        e.preventDefault();
+        clearData();
+        printThankYou();
     }
 }
 )
@@ -146,6 +146,24 @@ function removeSales(cart, clicks){
     else {
         displayOrder();
     }
+}
+
+function clearData(){
+    orderPage.innerHTML = '';
+    cardDetailsPage.style.display = 'none';
+    opaque.style.opacity = '1';
+    totalPrice = 0;
+    orderDetails = {};
+}
+
+function printThankYou(){
+    thankYouMsg.style.display = 'flex';
+    const formData = new FormData(paymentForm);
+    const name = formData.get('Name');
+    thankYouMsg.innerHTML = `<h1>Thanks ${name}! Your order is on its way!</h1>`;
+    setTimeout(function(){
+        thankYouMsg.style.display = 'none';
+    }, 8000)
 }
 
 function renderItems(){
