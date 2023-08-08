@@ -49,12 +49,6 @@ document.addEventListener('click', function(e){
         console.log('order completed')
         cardDetailsPage.style.display = 'block';
         opaque.style.opacity = '0.7';
-        
-        paymentForm.addEventListener('submit', function(e){
-            e.preventDefault();
-            clearData();
-            printThankYou();
-        })
     }
     // Close card details
     else if (e.target.className === 'fas fa-times'){
@@ -62,6 +56,12 @@ document.addEventListener('click', function(e){
         opaque.style.opacity = '1';
     }  
     })
+
+paymentForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    printThankYou();
+    clearData();
+})
 
 function renderSales(cart, clicks){
     // orderPage.innerHTML = ''
@@ -158,6 +158,7 @@ function clearData(){
 }
 
 function printThankYou(){
+    console.log('thanks')
     thankYouMsg.style.display = 'flex';
     const formData = new FormData(paymentForm);
     const name = formData.get('Name');
