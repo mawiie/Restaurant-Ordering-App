@@ -5,6 +5,7 @@ const cardDetailsPage = document.getElementById('card-details-page');
 const thankYouMsg = document.getElementById('thank-you-msg');
 const paymentForm = document.getElementById('payment-form');    
 const opaque = document.querySelector('.opaque');
+
 let orderDetails = {}
 let totalPrice = 0
 
@@ -48,19 +49,19 @@ document.addEventListener('click', function(e){
         console.log('order completed')
         cardDetailsPage.style.display = 'block';
         opaque.style.opacity = '0.7';
+        
+        paymentForm.addEventListener('submit', function(e){
+            e.preventDefault();
+            clearData();
+            printThankYou();
+        })
     }
     // Close card details
     else if (e.target.className === 'fas fa-times'){
         cardDetailsPage.style.display = 'none';
         opaque.style.opacity = '1';
-    }
-    else if (e.target.className === "pay-btn"){
-        e.preventDefault();
-        clearData();
-        printThankYou();
-    }
-}
-)
+    }  
+    })
 
 function renderSales(cart, clicks){
     // orderPage.innerHTML = ''
@@ -161,9 +162,6 @@ function printThankYou(){
     const formData = new FormData(paymentForm);
     const name = formData.get('Name');
     thankYouMsg.innerHTML = `<h1>Thanks ${name}! Your order is on its way!</h1>`;
-    setTimeout(function(){
-        thankYouMsg.style.display = 'none';
-    }, 8000)
 }
 
 function renderItems(){

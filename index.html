@@ -1,5 +1,6 @@
 <html>
     <head>
+        <meta charset="UTF-8">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
         <link rel="stylesheet" href="index.css">
 
@@ -46,15 +47,13 @@
                         </div>
                         <div class="card-details-form-body">
                             <div class="card-details-form-body-input">
-                                <form id="payment-form">
-                                    <input type="text" id="card-name" name="Name" placeholder="Enter your name" required>
-                                    <input type="text" id="card-number" name="card-Number" placeholder="Enter your card number" required>
-                                    <input type="password" id="card-cvv" name="CVV" placeholder="Enter CVV" required>
+                                <form>
+                                    <input type="text" id="card-name" name="Name" placeholder="Enter your name" required/>
+                                    <input type="text" id="card-number" name="card-Number" placeholder="Enter your card number" required/>
+                                    <input type="password" id="card-cvv" name="CVV" placeholder="Enter CVV" required/>
+                                    <button type="submit" id="card-details-form-footer-pay-btn" class="pay-btn">Pay</button>
                                 </form>
                             </div>
-                        </div>
-                        <div class="card-details-form-footer">
-                            <button id="card-details-form-footer-pay-btn" class="pay-btn">Pay</button>
                         </div>
                     </div>
             </section>
